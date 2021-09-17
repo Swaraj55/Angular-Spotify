@@ -1,0 +1,85 @@
+<mat-toolbar>
+    <mat-toolbar>
+        <img src="../../assets/spotify-icon.png" alt="spotify-icon" class="spotify_icon">
+        <span>NgSpotify</span>
+        <span class="example-spacer"></span>
+        <span class="buttons">Home</span>
+        <span class="buttons">About</span>
+    </mat-toolbar>
+</mat-toolbar>
+<div class="container-fluid primary-section">
+    <div class="row" style="height: 500px; min-height:500px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="color: white;">
+            <p class="display-4 mt-lg-5 mt-xs-2 ml-xs-2 ml-lg-5 shadow-sm" style="font-weight:bold;">Need Music?</p>
+            <p class="lead ml-xs-2 ml-lg-5">Welcome to Angular Spotify custom NgSpotify app built for a new spotify experience. <br>
+                Use the NgSpotify app to browse new releases and find your favourite songs.</p>
+
+            <div class="mt-5">
+                <input type="text" [formControl]="music" (keyup)="SearchMusic()" class="form-control" id="searchMusic" typeahead="huntMusic" placeholder="Search Music...">
+            </div>
+            <div *ngIf="huntMusic" id="musicSuggestion">
+                <div class="media border p-2" *ngFor="let musicArtist of huntMusic">
+                    <!-- <img src="img_avatar3.png" alt="John Doe" class="mr-3 rounded-circle" style="width:60px;"> -->
+                    <div class="media-body">
+                      <h4 (click)="selectArtist(musicArtist.id)" style="cursor: pointer;">{{musicArtist.name}}</h4>
+                      <p>Genres: <span *ngFor="let genre of musicArtist.genres">{{genre}}</span></p>
+                      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>       -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+            <img class="homeSpotifyImageYellow" src="../../assets/center-image.png" alt="Spotify image for landing page">
+            <img src="../../assets/spotify3.png" class="homeSpotifyImageBlue">
+            <img src="../../assets/spotify5.png" class="homeSpotifyImagePurple">
+            <img src="../../assets/spotify-7.png" class="homeSpotifyImageCoral">
+        </div>
+    </div>
+</div>
+<div class="container-fluid secondary-section">
+    <div class="row" style="height: 600px; min-height:600px;">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-7">
+            <h4 class="display-4 p-5" style="font-weight:bold;color: #0073cf;">Are you looking for music?<br><span>Start listening to the best new musics.</span></h4>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-3">
+            <img src="../../assets/primary-image.jpg" id="musicTune" alt="people-with-tunes">
+            <img src="../../assets/secondary-image.jpg" id="musicMellow">
+            <img src="../../assets/third-mage.jpg" id="musicImage">
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div class="container-fluid padding">
+        <div class="row" style="background-color: #212121;">
+            <div class="col-12 pt-4 pl-4 pb-4">
+                <img src="../../assets/spotify-icon.png" alt="spotify-icon" class="spotify_icon"> 
+                <span style="color: white;font-size: 22px;">NgSpotify</span>
+            </div>
+            <div class="col-md-4 text-center text-white"> 
+                <h5>Support</h5>
+                <hr class="light">
+                <p>Knowledge base</p>
+                <p>Find an expert</p>
+                <p>Request demo</p>
+            </div>
+            <div class="col-md-4 text-center text-white">
+                <h5>Company</h5>
+                <hr class="light">
+                <p>About us</p>
+                <p>Company Values</p>
+                <p>Webinars</p>
+            </div>
+            <div class="col-md-4 text-center text-white">
+                <h5>Follow Us</h5>
+                <hr class="light">
+                <p>Facebook</p>
+                <p>Instagram</p>
+                <p>YouTube</p>
+                <p>Twitter</p>
+            </div>
+        </div>
+    </div>
+</footer>
+  

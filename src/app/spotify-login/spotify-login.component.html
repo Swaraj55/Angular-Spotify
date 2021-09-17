@@ -1,0 +1,42 @@
+<div id="spotify-login-section" fxLayout="row" fxLayoutAlign="center center">
+    <mat-card id="spotify-login-card" class="mat-elevation-z6">
+        <div id="spotify-logo">
+            <img id="spotify-logo-main" src="../../assets/spotify-icon.png" alt="spotify-icon">
+            <span id="title">NgSpotify</span>
+        </div>
+
+        <form fxLayout="column" fxLayoutAlign="center center" name="loginForm" (ngSubmit)="onSubmit()" [formGroup]="loginForm" novalidate>
+            <mat-form-field appearance="outline" id="client-input-field">
+                <mat-label>Client ID</mat-label>
+                <input id="client-id" type="text" matInput formControlName="clientID">
+                <mat-icon matSuffix class="secondary-text">mail</mat-icon>
+                <mat-error id="client-id-required-error" *ngIf="loginForm.get('clientID').hasError('required')">
+                    Client ID is required.
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field appearance="outline" id="client-secret-input-field">
+                <mat-label>Client Secret</mat-label>
+                <input id="client-secret" type="text" matInput formControlName="clientSecret">
+                <mat-icon matSuffix class="secondary-text">vpn_key</mat-icon>
+                <mat-error>
+                    Client Secret is required.
+                </mat-error>
+            </mat-form-field>
+
+            <button id="login-button" mat-raised-button color="accent" class="submit-button" aria-label="LOG IN"
+                        [disabled]="loginForm.invalid">
+                    Log In
+            </button>
+        </form>
+    </mat-card>
+
+    <div class="floating-spotify-icons">
+        <img src="../../assets/spotify1.png" alt="spotify-icon-yellow">
+        <img src="../../assets/spotify2.png" alt="spotify-icon-olive">
+        <img src="../../assets/spotify3.png" alt="spotify-icon-blue">
+        <img src="../../assets/spotify4.png" alt="spotify-icon-green">
+        <img src="../../assets/spotify5.png" alt="spotify-icon-purple">
+        <img src="../../assets/spotify6.png" alt="spotify-icon-brown">
+    </div>
+</div>

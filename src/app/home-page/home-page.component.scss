@@ -1,0 +1,147 @@
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+.spotify_icon {
+    width: 40px;
+    height: 40px;
+    transform: rotate(5deg);
+}
+
+.buttons {
+    padding-right: 10px;
+}
+
+.primary-section {
+    background-color: #212121;
+}
+
+.homeSpotifyImageYellow {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    z-index: 4;
+    margin-left: 200px;
+    margin-top: 100px;
+    animation: bounceIn 7s linear infinite;
+}
+.homeSpotifyImageBlue {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 3;
+    margin-left: 150px;
+    animation: bounceIn 8s linear infinite;
+}
+.homeSpotifyImagePurple {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 450px;
+    margin-top: 120px;
+    animation: bounceIn 4s linear infinite;
+}
+.homeSpotifyImageCoral {
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 150px;
+    margin-top: 300px;
+    animation: bounceIn 6s linear infinite;
+}
+
+@keyframes bounceIn {
+    from,
+    20%,
+    40%,
+    60%,
+    80%,
+    to {
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+  
+    0% {
+      opacity: 0;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+  
+    20% {
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+  
+    40% {
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+  
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+  
+    80% {
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+  
+    to {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+.secondary-section {
+    background-color: #C0C0C0;
+}
+
+#musicTune {
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 250px;
+  height: 250px;
+  z-index: 2;
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 250px;
+  animation: bounceIn 8s linear infinite;
+}
+
+#musicMellow {
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  margin-top: 50px;
+  margin-left: 10px;
+  animation: bounceIn 5s linear infinite;
+}
+
+#musicImage {
+  border-radius: 5px;
+  width: 200px;
+  height: 200px;
+  z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  position: absolute;
+  margin-top: 350px;
+  margin-left: 20px;
+  animation: bounceIn 6s linear infinite;
+}
+
+#musicSuggestion {
+  overflow-y: scroll;
+  height: 200px;
+}
+#musicSuggestion::-webkit-scrollbar {
+  width:12px;
+}
+#musicSuggestion::-webkit-scrollbar-track {
+  -webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3); 
+  border-radius:5px;
+}
+#musicSuggestion::-webkit-scrollbar-thumb {
+  border-radius:5px;
+  -webkit-box-shadow: inset 0 0 6px #e75480; 
+}

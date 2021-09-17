@@ -1,0 +1,43 @@
+<div class="container-fluid">
+    <div class="row artist_main_section pt-5">
+
+        <div class="col-md-4 col-lg-4">
+            <div *ngIf="album_details">
+                <img class="artist-thumb rounded-lg" src="{{album_details.images[0].url}}">
+            </div>
+        </div>
+
+        <div class="col-md-8 col-lg-8">
+            <div *ngIf="album_details.artists.length > 0">
+                <h1 *ngFor="let artist of album_details.artists" style="font-weight: bold;color: #df73ff;">
+                    {{artist.name}}
+                </h1>
+                <h4 class="pt-3 text-white">{{album_details.name}}</h4>
+                <h5 class="text-white">Release Date: {{album_details.release_date}}</h5>
+                <h5 class="text-white">Total Track: {{album_details.total_tracks}}</h5>
+                <h5 class="text-white">Label: {{album_details.label}}</h5>
+
+                <a href="{{album_details.external_urls.spotify}}" class="btn btn-primary mt-5">View In Spotify</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row artist_main_section pt-5">
+        <div class="col-12">
+            <h2 style="font-weight: bold;color: #df73ff;">Album Tracks</h2>
+        </div>
+
+        <div class="col-md-4 col-lg-4" *ngFor="let track of album_details.tracks.items">
+            <div class="card shadow-lg mb-3" style="background-color: rgba(232, 232, 232, 0.2);">
+                <div class="card-body">
+                    <h4 style="font-weight: bold;color: #df73ff;">{{track.name}}</h4>
+                    <h6 class="text-white">Duration: {{track.duration_ms}}</h6>
+
+                    <a href="{{track.preview_url}}" class="text-white">Preview Track</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
