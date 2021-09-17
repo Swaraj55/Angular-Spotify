@@ -33,7 +33,7 @@ export class SpotifyLoginComponent implements OnInit {
 
     console.log(payload);
     this.url = 'https://accounts.spotify.com/authorize' + '?response_type=code' + 
-    '&client_id=' + payload.clientID + '&redirect_uri=' + encodeURIComponent('http://localhost:4200/homepage'); 
+    '&client_id=' + payload.clientID + '&redirect_uri=' + encodeURIComponent('https://ngppotify-music-app.herokuapp.com/homepage'); 
     window.location.href = this.url
   }
 
